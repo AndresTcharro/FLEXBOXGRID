@@ -1,0 +1,220 @@
+/* El css nos permite cambiar los colores, posiiones, tamaños, efectos de las etiquetas */
+/* Los selectores seleccionas las etiquetas html con lo estilos del documentos css */
+/* La estructura es  ejm: p{} */
+/* Tipos de selectores */
+/* 1. Selector de equitetas  */
+/* 2. Selector de clase */
+
+/* Para llamar a los selectores de clase los llamare con un punto */
+/* Para llamar a nuestro selector de id tengo que llamarlo con un  almohadilla # */
+/* La selecion individual prevalece sobre la seleccion
+general  */
+
+               /* Las jerarquías en los estilos */
+
+/*1. La etiqueta style tiene prioridad y la encontramos dentro del html  */
+/* 2. En segundo lugar vendrian los estilos del CSS */
+/* Cuanto mas generico sea el estilo menos prioriddad va a tener y en cuanto mas espesifico sea va a tener mas prioridad */
+
+    /* 1.ID */
+    /* 2.Class */
+    /* 3.Selector de etiqueta */
+/* 3.Si no definimos ningun estilo serian los estilos0 que da el navegador por defecto     */
+
+
+
+              /* Como anidar los selectores  */
+
+/* 1. Combinador de descendientes */
+     /* .parrafos p {}  aqui le indicamos que coja la etiquetas parrafos y todos los descendientes que sean p */
+/* 2.Combiandor de hijo >     */
+    /* .parrafos > p {} Unicamente va a seleccionar los hijos directos y esto lo indicamos con >  */
+/* 3.Combinador general de hermanos (~) */
+    /* .parrafos p ~ p {} quiero que cojas todos los elementos P que esten presedidos de otros P y que sean hijos del mismo padre en este caso de parrafos */
+/* 4.Combinador de hermanos adyacentes (+) */
+    /* .parrafos p + p {} el predecesor de p tiene que ser otro p si o si tiene que estaar pegado  */
+
+            /* Unidades y display */
+  /* 1.Atributos de tamaño*/
+        /* 1.2 Height -> altura del elemento */
+        /* 1.2 Hight -> anchura del elemento */
+        /* 1.3 Min-heigth y min-wight -> tamaós minimos */
+        /* 1.4 Max-heigth y max-heigth -> tamaños maximos */
+
+   /* 2. Tipos de unidades */
+        /* Absolutas, no dependen del tamaño del navegador ni de otros elementos  */
+            /* Puntos (pt), pulgadas(in), centimetros(cm) */
+        /* Relativas, dependen del tamaño del navegador u otros elementos */
+            /* Porcentaje(%) del elemento padre*/
+            /* ViewPort (vw o vh) porcentaje sobre la pantalla que se visualiza */
+            /* Em (em) y Rem (rem) relativo al 'font-size' de otros elementos */
+        /*Keywords depende del navegaor */
+            /* Small, medium, large */
+    /* 3. Margen, borde y relleno */
+        /* Border -> border del elemento */
+            /* border -weight: anchura */
+            /* borde-color: color */
+            /* border-style: punteado, rayas .. */
+        /* Padding */
+            /* espacios entre el borde y el contenido */
+        /* Margin */
+            /* espacio entre el borde y otros elementos */
+
+             /* Se puede definir un espacio diferente para cada área */
+             /* top, bottom, right, left */
+            /* Los margenes se solapan entre ellos y no se suman  */
+
+            /*   BOX-SIZING   */
+          /* Propiedad como se calcula el ancho y el alto */
+            /* Valores: */
+                /* Content-box : -> solo se cuelta el contenido  */
+                /* Border-box -> se cuenta borde y relleno */
+
+        /* DISPLAY */
+        /* Como se visualizan el elmeto en la web con respecto a los demás */
+        /* Como se coloca el elemnteo en la web  */
+        /* Valores: */
+            /* Block -> 1 elemento por línea   */
+                /*Encabezados, div, section, body..  */
+            /* Inline -> múltiples elementos por línea */
+                /* Enlaces, span ... (no respeta el ancho. el alto ni los márgenes) */
+            /* Inline-block -> mezcla de ambos     */
+                /* Multiples elementos en línea
+                Respeta tamaños y márgenes */
+
+        /* Como adaptar nuestra pagina web (interfaces flexibles) para los diferentes dispositivos  */
+
+        /* FLEXIBLE BOX */
+
+            /* Display: flex */
+                /* Nos da una forma más eficiente de alinear y distribuir los elementos en un contenedor  */
+                /* El contenedor modifica al altura y la anchura de sus hijos
+                para aprovechar el espacio al máximo */
+                /* Ideal para adaptar diseños (resposindt) a todo tipo de patalla o dispositivo */
+              /* Propiedades del contenedor:   */
+                /* Además del display-flex: podemos agregarle propiedades que modifican su comportamiento  */
+                    /* flex-direction -> establece la direccion en la que se colocaran los hijos
+                        flex-direction: row  -> en filas SI QUEREMOS QUE ESTE EN UNA LINEA 
+                        flex-direction:column  -> en columnas, CUANDO QUIERE UNA FORMA DE CUARICULA LO MEJOR ES UTILIZAR ESTA 
+                        flex-direction: row-reverse (ira a la inversa el primero al lado derecho ) | column-reverse */
+                    /* Flex-wrap -> los hijos ocupan varias líneas o sólo una
+                        flex-wrap : wrap (si no cabe todos en la linea los pasa a la siguiente)| nowrap (fuerza a meter todos en una sola linea ) */
+
+                    /* PARA POSICIONAR LOS ITEMS DENTRO DE UN CONTENEDOR TENEMOS QUE UTLIZAR DE 
+                    LA PROPIEDADES COMBINADAS DE JUSTIFY-CONTENT NOS LO COLOCA EN QUE DIRECION DEL EJE HORIZONTAL 
+                    QUEREMOS EL ITEM Y EL ALIGN-ITEMS  NOS VA COLOCANDO EN EL EJE VERTICAL DE NUESTRO CONTENEDOR   */
+
+                   /* PARA ALINEAR A LOS HIJOS DEL CONTENEDOR EN EL EJE PRINCIPAL (POR DEFECTO EL HORIZONTAL) */
+                        /* Justify-content -> alineacion en el eje principla, (POR DEFECTO) horizontal
+                        Justify-content: flex-start -> espacio a la derecha
+                        Justify-content: flex-end -> espacio a la izquierda de los elementos
+                        Justify-content: flex-center -> deja espacio tanto a la derecha como a la izquierda de los elementos
+                        Justify-content: space-between -> crea un espacion entre los elemnetos 
+                        Justify-content: space-around -> distribuye los items dejando el mismo espacio alredodor de ellos */
+
+                    /* PARA ALINEAR ALINEAR LOS ITEMS DEL EJE SECUNDARIO (POR DEFECTO EL VERTICAL ) */
+
+                     /* Align-items -> alineacion en el eje secundario
+                        align-item: stretch -> Ocupar todo el espacio disponible
+                        align-item: flex-star -> alinea los hijos solamente en la parte vertical de arriba para abajo
+                        align-item: flex-end -> aline  abao con espacios abajo
+                        align-item: center  cente los contenedores ->  */
+
+                    /*ALIGN-SELF -> PARA POSICIONAR DE MANERA INDIVIDUAL LOS ITEMS   */
+                    /* Align-contetnt -> alineacion de lineas completas
+                        align-content: flex-start -> alinea la primera fila y si solo hay un contenedor en la segund hace que tome las dimensiones del primero
+                        align-content: flex-end -> lo mismo que el anterio pero dejando espacio sobrante arriba
+                        align-content: center -> dentra todo
+                        align-content: space-between -> dejando espacion entre los hijos del contenedor */
+                    /* GAP
+                    row-gap -> para espacios en la filas 
+                    column-gao -> espacios entre las columnas para cada elemento */
+                   
+                        /* Order -> en que orden deben colocarse, sobreescibe el orden natural (independiente mente de como este en el html)
+                        order : -1, 0 , 1, 2 .. -> siempre de menor a mayor */
+                    /* Flex-grow -> cómo crecen(vertical u horizontal) en función del espacio disponible
+                        flex-grow: 0, 1, 2 .. -> nunca numeros negativos  */
+                    /* flex-shrink -> como decrecen(vertical u horizontal) en funcion del espacio disponible
+                        flex-shrink: 1, 2 .. */
+
+                    /* Para relealizar un sombreado utilizaremos la propiedad 
+                    box-shadow: 5 px  5px 2px/10px   */
+                    /* Para realizar filtros
+                    filter: contrast(50%) / brightness(0%) */
+
+                        /* GRID  */
+                    /* Para cologar los items dentri de contenedor */
+                    /* Atajo para colocar los items place-items */
+                    /* justify-items: start end center stretch
+                    align-items: start end center stretch
+                    Para colocar el contenido de cada item 
+                    Atajo para colocar el contenido de los item place-content
+                    justify-content: start end center stretch space-between space-around space-evenly
+                    align-content: start end center stretch space-between space-around space-evenly*/
+                    /* grid-auto-flow: row -> los elementos se van colocando de desde la izquierda hasta el final y continua en la siguiente fila */
+                    /* grid-auto-flow-column -> los elementos se van colomando desde la primera columna hasta el final pasando a la siguiente columna */
+                    
+                    /* Salvo justify-self->altera la justificacion del item hijo en el eje horizontal 
+
+                      align-self-> altera la alineacion del item hijo en el eje vertical  
+                       o grid-area-> */
+
+                       /* Para posicionar cada elemento hijo dentro de posicion que nosotros le indiquemos 
+                       utilizaremos las propiedades de 
+                       grid-column-> donde le indicaremos en la linea de la columna que queremos que empice y hasta donde queremos que termine 
+                       grid-row-> le indicamos la linea de la fila donde queremos que empice y hasata la linea de la fila que queremos que termine */
+
+                    /* estilos de los escabezados */
+
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 35rem;
+    align-content: center;
+
+
+}
+
+.encabezados{
+    /* para los div o contenedores nunca usara Inline */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    width: 800px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    color: blueviolet;
+    background-color: rgb(207, 209, 208);
+}
+
+.encabezados div {
+    flex-grow: 1;
+
+}
+#grande {
+    flex-grow: 3;
+}
+
+
+/* seletor de identificador */
+.encabezados h3 ~ h3 {
+
+    color: blue;
+    font-size: 25px;
+
+}
+
+
+.logo{
+    height: 80px;
+    
+}
+nav{
+    display: inline;
+}
+

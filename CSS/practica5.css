@@ -1,0 +1,189 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    
+    height: 4rem ;
+    padding: 0.5rem;
+
+    background-color: white;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img{
+    height: 6rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+
+}
+
+nav a{
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 1rem;
+
+    color: #474747;
+}
+
+#ultimos{
+    font-weight: 700;
+    
+    color: black;
+
+}
+.opciones{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    justify-content: space-between;
+    
+    
+    width: 7rem;
+
+}
+#search{
+   
+
+    width: 3rem;
+    
+}
+
+#user{
+   
+    width: 4rem;
+   
+}
+.userMenu{
+    display: flex;
+    position: absolute;
+    right: 0.2rem;
+    bottom: -5.8rem;
+
+    flex-direction: column;
+    background-color: lightblue;
+    
+    
+
+}
+.userMenu a{
+    
+    padding:  0.75rem 2rem;
+}
+
+/* MAIN */
+
+/*** Banner ***/
+
+.sctBanner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 3rem 0;
+
+    background-image: url("/Imagenes/back.jpg");
+
+}
+
+.banner{
+    height: 15rem;
+
+}
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+
+    color: orange;
+
+}
+.escritor{
+    display: flex;
+    align-items: center;
+
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 50%;
+    background-color: blue;
+
+}
+
+.avatar img{
+    height: 3rem;
+}
+.descripcion{
+    font-size:  0.8rem;
+    font-weight: 600;
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    text-align: center;
+    color: darkgoldenrod;
+
+}
+
+/*** Articulo ***/
+
+.info{
+    
+    padding: 3rem 0;
+}
+
+.divvideo{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#titulovideo{
+    font-size: 600;
+    padding-bottom: 3rem;
+
+    /* texto todo a mayusculas */
+    text-transform: uppercase; 
+    color:  burlywood;
+
+}.videocurso{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.videocuros video{
+
+    height: 20rem;
+
+    border-radius: 10px;
+    
+}
+li{
+    display: flex;
+    flex-direction: column;
+}
